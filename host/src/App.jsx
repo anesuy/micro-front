@@ -1,16 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Container from "./components/Container";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Component1 from "./components/Component1";
+import Header from "./components/Header";
+import HomePage from "./components/HomePage";
 import "./index.css";
 
 const App = () => (
-  <div className="container">
-    <div>Name: host</div>
-    <div>Framework: react</div>
-    <div>Language: JavaScript</div>
-    <div>CSS: Empty CSS</div>
-    <Container/>
-  </div>
+  <>
+    <Router>
+      <div className="container">
+        <Header />
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={
+              <>
+                <HomePage />
+                <Component1 />
+              </>
+            }
+          />
+        </Routes>
+      </div>
+    </Router>
+  </>
 );
 ReactDOM.render(<App />, document.getElementById("root"));

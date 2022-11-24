@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Component1 from "./components/Component1";
+import GitHub from "./components/GitHub";
 import Header from "./components/Header";
 import HomePage from "./components/HomePage";
 import "./index.css";
@@ -18,10 +18,10 @@ const App = () => (
             element={
               <>
                 <HomePage />
-                <Component1 />
               </>
             }
           />
+          <Route path='/github-page' element={<GitHub />}/> 
         </Routes>
       </div>
     </Router>

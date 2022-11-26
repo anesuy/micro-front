@@ -23,6 +23,10 @@ img {
 .user-page {
   display: flex;
   margin: 30px 20px;
+  border-width: thin;
+  border-color: black;
+  border-style: outset;
+  border-radius: 20px;
 }
 
 .img-name {

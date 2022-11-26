@@ -45,8 +45,7 @@ export default function User() {
         </div>
         <div className="user-info">
           <p className="user-login">{login}</p>
-
-          <p>{type}</p>
+          
           {hireable && <p>Hireable</p>}
           <p> Bio: {bio}</p>
 
@@ -93,7 +92,7 @@ export default function User() {
             <div>
               <FaStore />
             </div>
-            <div>Public Gists</div>
+            <div>Public Lists</div>
             <div>{public_gists}</div>
           </div>
         </div>

@@ -1,5 +1,10 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const webpack = require('webpack');
+const dotenv = require('dotenv')
+const path = require('path')
+
+dotenv.config({ path: path.resolve('.env')});
 
 const deps = require("./package.json").dependencies;
 module.exports = {
@@ -38,8 +43,8 @@ module.exports = {
       },
     ],
   },
-
-  plugins: [
+  
+    plugins: [
     new ModuleFederationPlugin({
       name: "container",
       filename: "remoteEntry.js",
@@ -62,5 +67,6 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/index.html",
     }),
+    new webpack.DefinePlugin({'process.env.REACT_APP_GIT_TOKEN': JSON.stringify(process.env.REACT_APP_GIT_TOKEN)})
   ],
 };

@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  background-color: darkgrey;
 }
 
 .container {
@@ -10,5 +13,40 @@ body {
 }
 
 .navbar {
-  
+}
+
+img {
+  width: 250px;
+  border-radius: 125px;
+}
+
+.user-page {
+  display: flex;
+  margin: 30px 20px;
+}
+
+.img-name {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  padding: 20px 10px;
+}
+
+.user-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.user-info-git {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 0;
+  width: 100%;
 }

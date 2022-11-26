@@ -5,17 +5,15 @@ function Header() {
   return (
     <header className="header">
       <ul>
+        <li>Instagram</li>
         <li>
-          Instagram
+          <Link to="/github-page">GitHub</Link>
         </li>
         <li>
-          <Link to='/github-page'>
-            GitHub
-          </Link>
+          <Link to="https://www.linkedin.com/in/suyaneoden/">LinkedIn</Link>
         </li>
-        <li>
-          LinkedIn
-        </li>
+        <li>Career</li>
+        <li>Skills</li>
       </ul>
     </header>
   );

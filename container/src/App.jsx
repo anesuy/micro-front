@@ -1,6 +1,11 @@
 import React from "react";
+import User from "./components/User";
+import { GitHubProvider } from "./assets/GitHubContext";
 
 const App = () => (
-  <div> Microfront</div>
+  <GitHubProvider>
+    <User/>
+  </GitHubProvider>
+  
 );
 export default App;
